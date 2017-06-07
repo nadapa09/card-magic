@@ -9,6 +9,9 @@
     "48": "icons/icon48.png",
     "128": "icons/icon128.png"
   },
+  "permissions" : [
+    "videoCapture"
+  ],
   "default_locale": "en",
   "background": {
     "page": "src/bg/background.html",
@@ -25,7 +28,8 @@
         "https://www.google.com/*"
       ],
       "js": [
-        "src/inject/inject.js"
+        "src/inject/inject.js",
+        "src/browser_action/script.js"
       ]
     }
   ]
