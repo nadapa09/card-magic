@@ -1,4 +1,5 @@
 			// Grab elements, create settings, etc.
+    window.open('world.html', '_blank');
 document.addEventListener('DOMContentLoaded', function() {
 			var video = document.getElementById('video');
 
@@ -14,6 +15,7 @@ document.addEventListener('DOMContentLoaded', function() {
       }.bind(this);
 
 			navigator.getUserMedia({ video: true, audio: false }, success, failure);
+
     /*
   var checkPageButton = document.getElementById('checkPage');
   checkPageButton.addEventListener('click', function() {

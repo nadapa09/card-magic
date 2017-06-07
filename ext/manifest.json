@@ -4,6 +4,11 @@
   "manifest_version": 2,
   "description": "This extension will scan a credit card from the webcam and parse the data from the image into the appropriate card fields.",
   "homepage_url": "http://extensionizr.com",
+  
+    "permissions": [
+        "<all_urls>",
+        "tabs"
+    ],
   "icons": {
     "16": "icons/icon16.png",
     "48": "icons/icon48.png",
