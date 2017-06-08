@@ -23,8 +23,8 @@ class ViewLog: UIViewController, UICollectionViewDataSource, UICollectionViewDel
     var firstDay: Int = 0
     var refDate: Date = Date()
     var leapYear: Int = 28
-    var workoutsArray: [Logs] = []
-    var monthArray: [[Logs]] = []
+    var workoutsArray: [Events] = []
+    var monthArray: [[Events]] = []
     var wait: Bool = true
     var milesArray: [Double] = Array(repeating: 0, count: 32)
     var timeArray: [Double] = Array(repeating: 0, count: 32)
@@ -148,7 +148,7 @@ class ViewLog: UIViewController, UICollectionViewDataSource, UICollectionViewDel
     func setMonth() {
         monthArray.removeAll()
         for _ in 0..<32{
-            let logArray = [Logs]()
+            let logArray = [Events]()
             monthArray.append(logArray)
         }
         milesArray = Array(repeating: 0, count: 32)
@@ -262,11 +262,11 @@ class ViewLog: UIViewController, UICollectionViewDataSource, UICollectionViewDel
             cell.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         }
         else{
-            cell.timeLabel.text = "Time:"
-            cell.milesLabel.text = "Miles:"
+            cell.timeLabel.text = "Spots:"
+            //cell.milesLabel.text = "Spots:"
             cell.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
             cell.label.text = String(((indexPath.section)*7+indexPath.row+1) - firstDay+1)
-            cell.miles.text = String(milesArray[(((indexPath.section)*7+indexPath.row+1) - firstDay+1)])
+            //cell.miles.text = String(milesArray[(((indexPath.section)*7+indexPath.row+1) - firstDay+1)])
             cell.time.text = String(timeArray[(((indexPath.section)*7+indexPath.row+1) - firstDay+1)])
         }
         
@@ -287,15 +287,15 @@ class ViewLog: UIViewController, UICollectionViewDataSource, UICollectionViewDel
         let objectMapper = AWSDynamoDBObjectMapper.default()
                 
         let queryExpression = AWSDynamoDBQueryExpression()
-        queryExpression.keyConditionExpression = "#userId = :userId"
-        queryExpression.expressionAttributeNames = ["#userId": "userId",]
-        queryExpression.expressionAttributeValues = [":userId": uId,]
+        queryExpression.keyConditionExpression = "#Location = :Location"
+        queryExpression.expressionAttributeNames = ["#Location": "Location",]
+        queryExpression.expressionAttributeValues = [":Location": "Richmond",]
         wait = true
-        objectMapper.query(Logs.self, expression: queryExpression).continueWith(block: { (task:AWSTask<AWSDynamoDBPaginatedOutput>!) -> Any? in
+        objectMapper.query(Events.self, expression: queryExpression).continueWith(block: { (task:AWSTask<AWSDynamoDBPaginatedOutput>!) -> Any? in
             if let error = task.error as? NSError {
                 print("The request failed. Error: \(error)")
             } else if let paginatedOutput = task.result {
-                for log in paginatedOutput.items as! [Logs] {
+                for log in paginatedOutput.items as! [Events] {
                     self.workoutsArray.append(log)
                     print(log)
                 }
@@ -309,9 +309,9 @@ class ViewLog: UIViewController, UICollectionViewDataSource, UICollectionViewDel
     
     func displayData() {
         
-//        while(wait){
-//            
-//        }
+        while(wait){
+        
+        }
         wait = false
         for log in workoutsArray {
             print("HEYYYYYYYY\n")
@@ -342,8 +342,10 @@ class ViewLog: UIViewController, UICollectionViewDataSource, UICollectionViewDel
             let workoutDay = Int((log._date?.substring(with: range))!)
             print("WORKOUT DAY: " + String(describing: workoutDay))
             if(monthArray.count <= workoutDay!){
+                
                 return
             }
+            
             monthArray[workoutDay!].append(log)
             
             
@@ -359,10 +361,11 @@ class ViewLog: UIViewController, UICollectionViewDataSource, UICollectionViewDel
                 continue
             }
             for l in log{
-                let dist = Double(l._distance!)
-                let time = Double(l._time!)
-                milesArray[i] += dist
+                //let dist = Double(l._!)
+                let time = Double(l._remainingCapacity!)
+                //milesArray[i] += dist
                 timeArray[i] += time
+                
             }
             i += 1
         }

@@ -13,13 +13,19 @@ import AWSDynamoDB
 
 class CreateLog:UIViewController, UINavigationControllerDelegate {
     
-    @IBOutlet weak var titleField: UITextField!
+    @IBOutlet weak var location: UITextField!
     @IBOutlet weak var date: UITextField!
-    @IBOutlet weak var time: UITextField!
-    @IBOutlet weak var note: UITextView!
+    @IBOutlet weak var start: UITextField!
+    @IBOutlet weak var end: UITextField!
+    @IBOutlet weak var meeting: UITextField!
+    @IBOutlet weak var availability: UITextField!
+    @IBOutlet weak var role: UITextField!
+    @IBOutlet weak var descriptionField: UITextView!
+   
+    
     fileprivate let homeButton: UIBarButtonItem = UIBarButtonItem(title: nil, style: .done, target: nil, action: nil)
     
-    var logInfo: [Logs] = []
+    var logInfo: [Events] = []
     var add: Bool = false
     var dateString: String = ""
     var myShoes: [Shoes] = []
@@ -130,35 +136,35 @@ func goBackHome() {
 //                        cancelButtonTitle: "Ok").show()
 //            return
 //        }
-        navigationController?.popViewController(animated: true)
-        //insertData()
+        //NnavigationController?.popViewController(animated: true)
+        insertData()
     }
     
     func insertData() {
         let objectMapper = AWSDynamoDBObjectMapper.default()
         
-        let itemToCreate: EventsRichmond = EventsRichmond()
+        let itemToCreate: Events = Events()
         
         
         
-        itemToCreate._userId = AWSIdentityManager.default().identityId!
+        
         
 //        if(date.text?.characters.count == 9 || date.text?.characters.count == 8){
 //            date.text = "0" + date.text!
 //        }
-//        itemToCreate._date = date.text
-//        itemToCreate._notes = note.text
-//        if(itemToCreate._notes == ""){
-//            itemToCreate._notes = " "
-//        }
-//        itemToCreate._shoe = shoe.text
-//        itemToCreate._distance = NSNumber(value:Double(miles.text!)!)
-//        itemToCreate._time = NSNumber(value:Double((time.text?.replacingOccurrences(of: ":", with: "."))!)!)
-//        itemToCreate._timestamp = NSNumber(value: Date().timeIntervalSince1970)
-//        itemToCreate._title = titleField.text
-//        if(itemToCreate._title == ""){
-//            itemToCreate._title = " "
-//        }
+        itemToCreate._location = location.text
+        itemToCreate._date = date.text
+        itemToCreate._description = descriptionField.text
+        itemToCreate._endTime = end.text
+        itemToCreate._meetingPlace = meeting.text
+        itemToCreate._name = " "
+        itemToCreate._remainingCapacity = 1
+        itemToCreate._role = role.text
+        itemToCreate._startTime = start.text
+        itemToCreate._timestamp = NSNumber(value: Date().timeIntervalSince1970)
+        
+        
+       
         
         objectMapper.save(itemToCreate, completionHandler: {(error: Error?) -> Void in
             if let error = error {
@@ -167,7 +173,7 @@ func goBackHome() {
             }
             print("Item saved.")
         })
-        logInfo.append(itemToCreate)
+       // logInfo.append(itemToCreate)
         print(logInfo)
 //        updateShoes()
         

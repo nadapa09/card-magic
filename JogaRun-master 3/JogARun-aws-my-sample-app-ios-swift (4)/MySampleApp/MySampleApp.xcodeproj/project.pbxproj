@@ -31,6 +31,8 @@
 		C9BFEC861EE8D53C0094F64C /* EventsSanFrancisco.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9BFEC801EE8D53C0094F64C /* EventsSanFrancisco.swift */; };
 		C9BFEC871EE8D53C0094F64C /* EventsSeattle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9BFEC811EE8D53C0094F64C /* EventsSeattle.swift */; };
 		C9BFEC881EE8D53C0094F64C /* Registrations.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9BFEC821EE8D53C0094F64C /* Registrations.swift */; };
+		C9BFEC8A1EE8D9140094F64C /* SelectLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9BFEC891EE8D9140094F64C /* SelectLocation.swift */; };
+		C9BFEC8C1EE8E11D0094F64C /* Events.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9BFEC8B1EE8E11D0094F64C /* Events.swift */; };
 		E7A30F04026F651800000000 /* NoSQLTableListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DD70E29786B1F4E00000000 /* NoSQLTableListViewController.swift */; };
 		E7A30F04089091F900000000 /* NoSQLModelHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DD70E29DD71FF8800000000 /* NoSQLModelHelpers.swift */; };
 		E7A30F040BBC1C0F00000000 /* AWSConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DD70E2948609E1C00000000 /* AWSConfiguration.swift */; };
@@ -168,6 +170,8 @@
 		C9BFEC801EE8D53C0094F64C /* EventsSanFrancisco.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EventsSanFrancisco.swift; path = MySampleApp/AmazonAws/Models/NoSQL/EventsSanFrancisco.swift; sourceTree = SOURCE_ROOT; };
 		C9BFEC811EE8D53C0094F64C /* EventsSeattle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EventsSeattle.swift; path = MySampleApp/AmazonAws/Models/NoSQL/EventsSeattle.swift; sourceTree = SOURCE_ROOT; };
 		C9BFEC821EE8D53C0094F64C /* Registrations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Registrations.swift; path = MySampleApp/AmazonAws/Models/NoSQL/Registrations.swift; sourceTree = SOURCE_ROOT; };
+		C9BFEC891EE8D9140094F64C /* SelectLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectLocation.swift; sourceTree = SOURCE_ROOT; };
+		C9BFEC8B1EE8E11D0094F64C /* Events.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Events.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -233,6 +237,7 @@
 				C91B0B741E9C4E5A00623683 /* CustomCollectionCell.swift */,
 				C9759D9B1E9D1B9700BCE08F /* CustomTableCell.swift */,
 				C9759D9F1E9D21F200BCE08F /* ViewIndivLog.swift */,
+				C9BFEC891EE8D9140094F64C /* SelectLocation.swift */,
 			);
 			name = ViewLog;
 			sourceTree = "<group>";
@@ -408,6 +413,7 @@
 				1DD70E29DBDA723700000000 /* Logs.swift */,
 				1DD70E29A822000700000000 /* Teams.swift */,
 				ABB5D8E01EA91E0D00B6276B /* Users.swift */,
+				C9BFEC8B1EE8E11D0094F64C /* Events.swift */,
 			);
 			name = NoSQL;
 			path = mysampleapp/amazonaws/models/nosql;
@@ -547,6 +553,7 @@
 				ABA856601EA2AA310007B3BB /* UserSearch.swift in Sources */,
 				E7A30F0449D4FA4600000000 /* UserPoolSignUpConfirmationViewController.swift in Sources */,
 				E7A30F04026F651800000000 /* NoSQLTableListViewController.swift in Sources */,
+				C9BFEC8C1EE8E11D0094F64C /* Events.swift in Sources */,
 				C91B0B751E9C4E5A00623683 /* CustomCollectionCell.swift in Sources */,
 				E7A30F049F990A4500000000 /* NoSQLTableFactory.swift in Sources */,
 				E7A30F04C109829400000000 /* UserPoolMFAViewController.swift in Sources */,
@@ -564,6 +571,7 @@
 				C9BFEC841EE8D53C0094F64C /* EventsPlano.swift in Sources */,
 				C9040A601EAD7DF200D95463 /* Shoes.swift in Sources */,
 				C9BFEC881EE8D53C0094F64C /* Registrations.swift in Sources */,
+				C9BFEC8A1EE8D9140094F64C /* SelectLocation.swift in Sources */,
 				E7A30F042CF9AE4000000000 /* UtilityFunctions.swift in Sources */,
 				E7A30F045E7887E800000000 /* NoSQLTableViewController.swift in Sources */,
 				E7A30F049515BB9800000000 /* MainViewController.swift in Sources */,

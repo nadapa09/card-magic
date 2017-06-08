@@ -11,17 +11,13 @@ import UIKit
 
 class CustomTableCell: UITableViewCell {
     
-    @IBOutlet weak var miles: UILabel!
-    @IBOutlet weak var time: UILabel!
-    @IBOutlet weak var pace: UILabel!
-    @IBOutlet weak var shoe: UILabel!
-    @IBOutlet weak var heartRate: UILabel!
-    
-    @IBOutlet weak var note: UITextView!
-    
-    @IBOutlet weak var title: UILabel!
-    
-    
-    
+    @IBOutlet weak var availability: UILabel!
+    @IBOutlet weak var role: UILabel!
+    @IBOutlet weak var location: UILabel!
+    @IBOutlet weak var meetingPlace: UILabel!
+    @IBOutlet weak var startTime: UILabel!
+    @IBOutlet weak var endTime: UILabel!
+    @IBOutlet weak var notes: UITextView!
+   
     
 }
