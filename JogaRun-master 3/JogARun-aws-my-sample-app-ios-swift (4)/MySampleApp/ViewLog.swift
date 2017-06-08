@@ -309,9 +309,9 @@ class ViewLog: UIViewController, UICollectionViewDataSource, UICollectionViewDel
     
     func displayData() {
         
-        while(wait){
-            
-        }
+//        while(wait){
+//            
+//        }
         wait = false
         for log in workoutsArray {
             print("HEYYYYYYYY\n")

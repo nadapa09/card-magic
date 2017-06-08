@@ -25,6 +25,12 @@
 		C91B0B751E9C4E5A00623683 /* CustomCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91B0B741E9C4E5A00623683 /* CustomCollectionCell.swift */; };
 		C9759D9C1E9D1B9700BCE08F /* CustomTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9759D9B1E9D1B9700BCE08F /* CustomTableCell.swift */; };
 		C9759DA01E9D21F200BCE08F /* ViewIndivLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9759D9F1E9D21F200BCE08F /* ViewIndivLog.swift */; };
+		C9BFEC831EE8D53C0094F64C /* EventsMcLean.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9BFEC7D1EE8D53C0094F64C /* EventsMcLean.swift */; };
+		C9BFEC841EE8D53C0094F64C /* EventsPlano.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9BFEC7E1EE8D53C0094F64C /* EventsPlano.swift */; };
+		C9BFEC851EE8D53C0094F64C /* EventsRichmond.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9BFEC7F1EE8D53C0094F64C /* EventsRichmond.swift */; };
+		C9BFEC861EE8D53C0094F64C /* EventsSanFrancisco.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9BFEC801EE8D53C0094F64C /* EventsSanFrancisco.swift */; };
+		C9BFEC871EE8D53C0094F64C /* EventsSeattle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9BFEC811EE8D53C0094F64C /* EventsSeattle.swift */; };
+		C9BFEC881EE8D53C0094F64C /* Registrations.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9BFEC821EE8D53C0094F64C /* Registrations.swift */; };
 		E7A30F04026F651800000000 /* NoSQLTableListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DD70E29786B1F4E00000000 /* NoSQLTableListViewController.swift */; };
 		E7A30F04089091F900000000 /* NoSQLModelHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DD70E29DD71FF8800000000 /* NoSQLModelHelpers.swift */; };
 		E7A30F040BBC1C0F00000000 /* AWSConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DD70E2948609E1C00000000 /* AWSConfiguration.swift */; };
@@ -156,6 +162,12 @@
 		C91B0B741E9C4E5A00623683 /* CustomCollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCollectionCell.swift; sourceTree = SOURCE_ROOT; };
 		C9759D9B1E9D1B9700BCE08F /* CustomTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTableCell.swift; sourceTree = SOURCE_ROOT; };
 		C9759D9F1E9D21F200BCE08F /* ViewIndivLog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewIndivLog.swift; sourceTree = SOURCE_ROOT; };
+		C9BFEC7D1EE8D53C0094F64C /* EventsMcLean.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EventsMcLean.swift; path = MySampleApp/AmazonAws/Models/NoSQL/EventsMcLean.swift; sourceTree = SOURCE_ROOT; };
+		C9BFEC7E1EE8D53C0094F64C /* EventsPlano.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EventsPlano.swift; path = MySampleApp/AmazonAws/Models/NoSQL/EventsPlano.swift; sourceTree = SOURCE_ROOT; };
+		C9BFEC7F1EE8D53C0094F64C /* EventsRichmond.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EventsRichmond.swift; path = MySampleApp/AmazonAws/Models/NoSQL/EventsRichmond.swift; sourceTree = SOURCE_ROOT; };
+		C9BFEC801EE8D53C0094F64C /* EventsSanFrancisco.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EventsSanFrancisco.swift; path = MySampleApp/AmazonAws/Models/NoSQL/EventsSanFrancisco.swift; sourceTree = SOURCE_ROOT; };
+		C9BFEC811EE8D53C0094F64C /* EventsSeattle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EventsSeattle.swift; path = MySampleApp/AmazonAws/Models/NoSQL/EventsSeattle.swift; sourceTree = SOURCE_ROOT; };
+		C9BFEC821EE8D53C0094F64C /* Registrations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Registrations.swift; path = MySampleApp/AmazonAws/Models/NoSQL/Registrations.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -386,6 +398,12 @@
 		B401C979C342157100000000 /* NoSQL */ = {
 			isa = PBXGroup;
 			children = (
+				C9BFEC7D1EE8D53C0094F64C /* EventsMcLean.swift */,
+				C9BFEC7E1EE8D53C0094F64C /* EventsPlano.swift */,
+				C9BFEC7F1EE8D53C0094F64C /* EventsRichmond.swift */,
+				C9BFEC801EE8D53C0094F64C /* EventsSanFrancisco.swift */,
+				C9BFEC811EE8D53C0094F64C /* EventsSeattle.swift */,
+				C9BFEC821EE8D53C0094F64C /* Registrations.swift */,
 				C9040A5F1EAD7DF200D95463 /* Shoes.swift */,
 				1DD70E29DBDA723700000000 /* Logs.swift */,
 				1DD70E29A822000700000000 /* Teams.swift */,
@@ -520,6 +538,7 @@
 				E7A30F04D8CF5A5E00000000 /* UserPoolSignUpViewController.swift in Sources */,
 				E7A30F045F8A62D100000000 /* NoSQLQueryResultViewController.swift in Sources */,
 				E7A30F04F5D8BB5800000000 /* UserPoolNewPasswordViewController.swift in Sources */,
+				C9BFEC871EE8D53C0094F64C /* EventsSeattle.swift in Sources */,
 				E7A30F04D1F4897C00000000 /* Teams.swift in Sources */,
 				E7A30F044FA9C5D400000000 /* SignInViewController.swift in Sources */,
 				AB1A20EA1EAAA4C200F72BC7 /* ViewTeam.swift in Sources */,
@@ -533,6 +552,7 @@
 				E7A30F04C109829400000000 /* UserPoolMFAViewController.swift in Sources */,
 				E7A30F045A80774200000000 /* AppDelegate.swift in Sources */,
 				E7A30F0463F3EFD900000000 /* UserPoolForgotPasswordViewController.swift in Sources */,
+				C9BFEC831EE8D53C0094F64C /* EventsMcLean.swift in Sources */,
 				681D870F1EA90D1000103A8B /* MakeTeam.swift in Sources */,
 				C9759DA01E9D21F200BCE08F /* ViewIndivLog.swift in Sources */,
 				E7A30F04541C916600000000 /* DemoFeature.swift in Sources */,
@@ -540,11 +560,15 @@
 				E7A30F04A2463A6900000000 /* SignInViewControllerExtensions.swift in Sources */,
 				E7A30F0448E3DEBF00000000 /* NoSQLSampleDataGenerator.swift in Sources */,
 				ABC631421E9806C500EB7584 /* CreateLog.swift in Sources */,
+				C9BFEC851EE8D53C0094F64C /* EventsRichmond.swift in Sources */,
+				C9BFEC841EE8D53C0094F64C /* EventsPlano.swift in Sources */,
 				C9040A601EAD7DF200D95463 /* Shoes.swift in Sources */,
+				C9BFEC881EE8D53C0094F64C /* Registrations.swift in Sources */,
 				E7A30F042CF9AE4000000000 /* UtilityFunctions.swift in Sources */,
 				E7A30F045E7887E800000000 /* NoSQLTableViewController.swift in Sources */,
 				E7A30F049515BB9800000000 /* MainViewController.swift in Sources */,
 				E7A30F04089091F900000000 /* NoSQLModelHelpers.swift in Sources */,
+				C9BFEC861EE8D53C0094F64C /* EventsSanFrancisco.swift in Sources */,
 				E7A30F04646629E500000000 /* LogsTable.swift in Sources */,
 				681D87051EA8FDC200103A8B /* TeamEntryVC.swift in Sources */,
 				E7A30F040DB3317200000000 /* UserIdentityViewController.swift in Sources */,

@@ -36,44 +36,10 @@ class MainViewController: UITableViewController {
             demoFeatures.append(demoFeature)
         }
         else {
-            var demoFeature = DemoFeature.init(
-                name: NSLocalizedString("Add Log",
-                                        comment: "Label for demo menu option."),
-                detail: NSLocalizedString("Create a new workout",
-                                          comment: "Description for demo menu option."),
-                icon: "Add", storyboard: "CreateLog")
-            
-            demoFeatures.append(demoFeature)
-            
-            demoFeature = DemoFeature.init(
-                name: NSLocalizedString("View Log",
-                                        comment: "Label for demo menu option."),
-                detail: NSLocalizedString("View your logs",
-                                          comment: "Description for demo menu option."),
-                icon: "Runner", storyboard: "ViewLog")
-            
-            demoFeatures.append(demoFeature)
-            
-            demoFeature = DemoFeature.init(
-                name: NSLocalizedString("Teams",
-                                        comment: "Label for demo menu option."),
-                detail: NSLocalizedString("Create and view Team Pages",
-                                          comment: "Description for demo menu option."),
-                icon: "Team", storyboard: "TeamEntry")
-            
-            demoFeatures.append(demoFeature)
-            
-            
-            demoFeature = DemoFeature.init(
-                name: NSLocalizedString("Search",
-                                        comment: "Label for demo menu option."),
-                detail: NSLocalizedString("Search for Another User",
-                                          comment: "Description for demo menu option."),
-                icon: "Search", storyboard: "UserSearch")
-            demoFeatures.append(demoFeature)
+            let storyboard = UIStoryboard(name: "ViewLog", bundle: nil)
+            let controller = storyboard.instantiateViewController(withIdentifier: "ViewLog")
+            navigationController?.pushViewController(controller, animated: true)
         }
-        
-        tableView.reloadData()
     }
     
     override func viewDidLoad() {
