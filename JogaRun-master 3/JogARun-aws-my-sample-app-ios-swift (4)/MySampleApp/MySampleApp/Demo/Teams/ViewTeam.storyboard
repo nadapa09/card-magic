@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Team-->
+        <scene sceneID="qZy-BS-rDC">
+            <objects>
+                <viewController storyboardIdentifier="ViewTeam" id="L3U-vT-G5Z" customClass="ViewTeam" customModule="MySampleApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1hv-jq-bjY"/>
+                        <viewControllerLayoutGuide type="bottom" id="UK8-ZC-blz"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Cgf-Bn-jAi">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="zn3-SF-WdI">
+                                <rect key="frame" x="0.0" y="83" width="375" height="538"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="9m3-FE-4Kr">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9m3-FE-4Kr" id="Bic-t6-7Cv">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Team Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wUE-de-mWx">
+                                <rect key="frame" x="0.0" y="20" width="375" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9s4-Ac-8IJ">
+                                <rect key="frame" x="128" y="629" width="119" height="30"/>
+                                <state key="normal" title="Add Teammates"/>
+                                <connections>
+                                    <action selector="addTeammates:" destination="L3U-vT-G5Z" eventType="touchUpInside" id="nUy-Rw-EsX"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="zn3-SF-WdI" secondAttribute="trailing" constant="-16" id="0Ee-i2-TAf"/>
+                            <constraint firstItem="zn3-SF-WdI" firstAttribute="top" secondItem="wUE-de-mWx" secondAttribute="bottom" constant="42" id="6ql-tF-FVw"/>
+                            <constraint firstItem="wUE-de-mWx" firstAttribute="top" secondItem="1hv-jq-bjY" secondAttribute="bottom" id="8qu-Ia-AH1"/>
+                            <constraint firstItem="zn3-SF-WdI" firstAttribute="leading" secondItem="Cgf-Bn-jAi" secondAttribute="leadingMargin" constant="-16" id="GOp-Z2-QZw"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="wUE-de-mWx" secondAttribute="trailing" constant="-16" id="KKH-2F-ZKd"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="9s4-Ac-8IJ" secondAttribute="trailing" constant="112" id="LsA-bY-ftw"/>
+                            <constraint firstItem="9s4-Ac-8IJ" firstAttribute="leading" secondItem="Cgf-Bn-jAi" secondAttribute="leadingMargin" constant="112" id="MEf-nG-ceV"/>
+                            <constraint firstItem="9s4-Ac-8IJ" firstAttribute="top" secondItem="zn3-SF-WdI" secondAttribute="bottom" constant="8" id="TLN-eN-uXF"/>
+                            <constraint firstItem="wUE-de-mWx" firstAttribute="leading" secondItem="Cgf-Bn-jAi" secondAttribute="leadingMargin" constant="-16" id="fSl-Fm-yDj"/>
+                            <constraint firstItem="UK8-ZC-blz" firstAttribute="top" secondItem="9s4-Ac-8IJ" secondAttribute="bottom" constant="8" id="umB-cC-amL"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="0qv-by-MUP"/>
+                    <connections>
+                        <outlet property="teamList" destination="zn3-SF-WdI" id="J2c-wi-n4C"/>
+                        <outlet property="teamNameLabel" destination="wUE-de-mWx" id="U8p-oW-7Ce"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rhi-TX-jzo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-124" y="-6.746626686656672"/>
+        </scene>
+    </scenes>
+</document>
